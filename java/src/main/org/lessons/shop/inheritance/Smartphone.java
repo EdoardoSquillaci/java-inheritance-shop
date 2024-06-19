@@ -3,7 +3,8 @@ package org.lessons.shop.inheritance;
 import java.util.Random;
 
 public class Smartphone extends Prodotto {
-	//Smarphone, caratterizzati anche dal codice IMEI e dalla quantità di memoria
+	//Smarphone, caratterizzati anche dal codice IMEI
+	//e dalla quantità di memoria
 	 
 	
 	 int codiceIMEI;
@@ -14,10 +15,10 @@ public class Smartphone extends Prodotto {
 		super(nome, marca, prezzo, iva);
 		
 		
-		int valoreMassimoCodice = 5000;
+		int valoreMassimoCodice = 999999999;
 		
 		
-		int valoreMinimoCodice = 110;
+		int valoreMinimoCodice = 222222222;
 
 		Random codiceIMEIRandomico = new Random();
 		

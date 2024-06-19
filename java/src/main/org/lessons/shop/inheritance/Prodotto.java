@@ -3,7 +3,7 @@ package org.lessons.shop.inheritance;
 import java.util.Random;
 
 //Un prodotto è caratterizzato da:
-//codice (numero intero) accessibile solo iun lettura
+//codice (numero intero) accessibile solo in lettura
 //nome
 //marca
 //prezzo
@@ -27,7 +27,6 @@ public class Prodotto {
 	    int valoreMinimo = 11111;
 		
 		int valoreMassimo = 99999;
-		
 		
 	    Random codiceRandom = new Random();
 		 
@@ -83,14 +82,16 @@ public class Prodotto {
 	}
 	
 	
-	public String prezzoIva() {
+	public double prezzoIva() {
 		
-		String prezzoIva = prezzo + (prezzo * iva)/100+ "€ / prezzo finale";
+		double prezzoIva = prezzo + (prezzo * iva)/100;
 		
 		return prezzoIva;
 		
 	}
 	
-	
+	public String prezzoIvaFormattato() {
+        return String.format("%.2f", prezzoIva());
+    }
 	
 }
